@@ -1,0 +1,92 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	background-color: #f4c2c2;
+	height: 100vh;
+}
+
+/* Piano style*/
+.piano {
+	display: flex;
+	border-radius: 20px;
+}
+/* End of Piano style*/
+
+/* Piano Keys */
+.key {
+	width: var(--width);
+	height: calc(var(--width) * 4);
+}
+.white {
+	transition: background 0.8s;
+	border: 2px solid #ff1493;
+	background-color: #ffff;
+	--width: 100px;
+}
+.white:active {
+	transition: background 0s;
+	background-color: #ccc;
+}
+.black {
+	transition: all 0.8s;
+	z-index: 2;
+	margin-right: calc(var(--width) / -2);
+	margin-left: calc(var(--width) / -2);
+	border-radius: 0px 0px 10px 10px;
+	box-shadow: 0 10px 6px -6px #777;
+	background-color: #cd5e77;
+	--width: 60px;
+}
+.black:active {
+	transition: all 0s;
+	box-shadow: 0px 0px 10px 5px #9c475b;
+	animation: anim-shadow 0.3s forwards;
+}
+
+/* end of piano key styles */
+
+/* animation-shadow */
+@keyframes anim-shadow {
+	100% {
+		box-shadow: 0px 0px 50px 20px rgba (112, 111, 211, 0);
+	}
+}
+/* end of animation-shadow */
+
+/* Medua Queries */
+@media (max-width: 1024px) and (min-width: 901px) {
+	body {
+		background: red;
+	}
+	.key {
+		width: var(--width);
+		height: calc(var(--width) * 4);
+	}
+	.white {
+		--width: 90px;
+	}
+	.black {
+		--width: 60px;
+	}
+}
+@media (max-width: 900px) {
+	body {
+		background: yellow;
+	}
+	.key {
+		width: var(--width);
+		height: calc(var(--width) * 4);
+	}
+	.white {
+		--width: 50px;
+	}
+	.black {
+		--width: 30px;
+	}
+}
+/* end of media queries */
