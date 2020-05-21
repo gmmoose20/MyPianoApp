@@ -60,9 +60,6 @@ body {
 
 /* Medua Queries */
 @media (max-width: 1024px) and (min-width: 901px) {
-	body {
-		background: red;
-	}
 	.key {
 		width: var(--width);
 		height: calc(var(--width) * 4);
@@ -75,9 +72,6 @@ body {
 	}
 }
 @media (max-width: 900px) {
-	body {
-		background: yellow;
-	}
 	.key {
 		width: var(--width);
 		height: calc(var(--width) * 4);
